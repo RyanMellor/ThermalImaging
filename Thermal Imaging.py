@@ -154,9 +154,9 @@ class ThermographyData():
     def export_data(self):
         """Exports the data."""
 
-        filename_raw_frames = f"data/{self.created} - {self.data_type} - {self.sample_name} - raw frames.csv"
-        filename_average_frame = f"data/{self.created} - {self.data_type} - {self.sample_name} - average frame.csv"
-        filename_roi_data = f"data/{self.created} - {self.data_type} - {self.sample_name} - roi data.csv"
+        filename_raw_frames = f"exported data/{self.created} - {self.data_type} - {self.sample_name} - raw frames.csv"
+        filename_average_frame = f"exported data/{self.created} - {self.data_type} - {self.sample_name} - average frame.csv"
+        filename_roi_data = f"exported data/{self.created} - {self.data_type} - {self.sample_name} - roi data.csv"
 
         with open(filename_raw_frames, 'w') as f:
             for frame in self.raw_frames:
@@ -242,7 +242,7 @@ class ThermalImagingApp(QMainWindow):
         self.setWindowTitle("Thermal Imaging")
 
         app_icon = QIcon()
-        app_icon.addFile('assets\Logo.png', QSize(256, 256))
+        app_icon.addFile('assets\\Logo.png', QSize(256, 256))
         self.setWindowIcon(app_icon)
 
         self.setGeometry(100, 100, 1200, 800)
